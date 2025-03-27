@@ -1,0 +1,53 @@
+{
+  "name": "typescript-namespaced-exporter",
+  "displayName": "Typescript Namespaced Exports",
+  "description": "Converts export * statements to namespaced exports",
+  "version": "0.0.1",
+  "publisher": "omarish",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omarish/export-namespaced-star"
+  },
+  "author": {
+    "name": "Omar Bohsali",
+    "email": "omar.bohsali@gmail.com"
+  },
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:namespace-exporter.convertToNamespacedExports"],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "namespace-exporter.convertToNamespacedExports",
+        "title": "Convert to namespaced exports"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "check": "biome check --apply ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/inflection": "^1.13.0",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^18.x",
+    "@types/vscode": "^1.87.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

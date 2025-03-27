@@ -1,0 +1,34 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# TypeScript
+dist/
+*.tsbuildinfo
+
+# Jest
+coverage/
+
+# VS Code
+.vscode/
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+dist/
+*.js # Exclude compiled JS files except those we want to keep
+!jest.config.js
+
+# Logs
+logs/
+*.log
+
+# Editor temp files
+*.swp
+*.swo
+*~
